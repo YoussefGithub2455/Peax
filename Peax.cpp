@@ -23,21 +23,24 @@ while (true)
     cout<<"3.ASCII Calculator"<<endl;
     cout<<"4.Charcter Encrypter"<<endl;
     cout<<"5.Odd/Even number Checker"<<endl;
-    cout<<"6.Exit"<<endl;
+    cout<<"6.Phone Suggester"<<endl;
+    cout<<"7.Exit"<<endl;
     cout<<" "<<endl;
     cout<<"=============================================="<<endl;
     cout<<" "<<endl;
     cout<<"Choose a Program: ";
     cin>>choice;
     if (cin.fail()) {
-    cin.clear(); // مسح حالة الخطأ
-    cin.ignore(1000, '\n'); // تجاهل المدخلات الخاطئة
-    continue; // العودة لبداية الحلقة
+    cin.clear();
+    cin.ignore(1000, '\n');
+    continue; 
     }
     cout<<" "<<endl;
     cout<<"=============================================="<<endl;
     cout<<" "<<endl;
-    if (choice==1)
+    switch (choice)
+    {
+    case 1:
     {
         cout<<" "<<endl;
         cout<<R"(
@@ -85,9 +88,10 @@ while (true)
         cout<<" "<<endl;
         cout<<"===================================== "<<endl;
         cout<<" "<<endl;
+        break;
     }
     
-    else if (choice==2)
+    case 2:
     {
         cout<<" "<<endl;
        
@@ -153,8 +157,10 @@ while (true)
         cout<<" "<<endl;
         cout<<"=============================="<<endl;
         cout<<" "<<endl;
+        break;
     }
-    else if (choice==3)
+
+    case 3:
     {
         cout<<" "<<endl;
         cout<<R"(
@@ -189,9 +195,11 @@ while (true)
             cout<<" "<<endl;
             cout<<"==========================="<<endl;
             cout<<" "<<endl;
-        }        
+        }       
+        break; 
     }
-    else if (choice==4)
+
+    case 4:
     {
         cout<<" "<<endl;
         cout<<R"(  ____ _                          _             
@@ -214,8 +222,10 @@ while (true)
         cout<<" "<<endl;
         cout<<"==============================="<<endl;
         cout<<" "<<endl;
+        break;
     }
-    else if (choice==5)
+
+    case 5:
     {
         cout<<"Odd/Even number Checker"<<endl;
         cout<<" "<<endl;
@@ -236,16 +246,118 @@ while (true)
         cout<<" "<<endl;
         cout<<"==============================="<<endl;
         cout<<" "<<endl;
-    }
-    else if (choice==6)
-    {
         break;
     }
-    else
+    case 6:
+    {
+        cout<<R"( ____  _                                        
+|  _ \| |__   ___  _ __   ___                   
+| |_) | '_ \ / _ \| '_ \ / _ \                  
+|  __/| | | | (_) | | | |  __/                  
+|_|__ |_| |_|\___/|_| |_|\___|     _            
+/ ___| _   _  __ _  __ _  ___  ___| |_ ___ _ __ 
+\___ \| | | |/ _` |/ _` |/ _ \/ __| __/ _ \ '__|
+ ___) | |_| | (_| | (_| |  __/\__ \ ||  __/ |   
+|____/ \__,_|\__, |\__, |\___||___/\__\___|_|   
+             |___/ |___/                        )"<<endl;
+        cout<<" "<<endl;
+        cout<<"==================================="<<endl;
+        cout<<" "<<endl;
+        int budget;
+        cout<<"Enter Your Budget in $: ";
+        cin>>budget;
+        string focus;
+        cout<<"Are you focusing on the camera, performance, UI, or All ?: (cam/per/UI/All): ";
+        cin>>focus;
+        cout<<" "<<endl;
+        cout<<"============================================"<<endl;
+        cout<<" "<<endl;
+
+        if (budget>100 && budget<=200 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
+        {
+            cout<<"Xiaomi Redmi Note 14 is the best cheap phone that focuses on the camera."<<endl;
+        }
+        else if (budget>100 && budget<=200 && (focus=="per" || focus=="Per" || focus=="PER"))
+        {
+            cout<<"Realme 14X is the best cheap phone that focuses on Performance"<<endl;
+        }
+        else if (budget>100 && budget<=200 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
+        {
+            cout<<"Samsung Galaxy A17 is the best cheap phone that focuses on UI"<<endl;
+        }
+        else if (budget>100 && budget<=200 && (focus=="All" || focus=="all" || focus=="ALL"))
+        {
+            cout<<"Samsung Galaxy A17 is the best balanced cheap phone"<<endl;
+        }
+        else if (budget>200 && budget<=600 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
+        {
+            cout<<"Google Pixel 9a is the best mid-range phone that focuses on Camera"<<endl;
+        }
+        else if (budget>200 && budget<=600 && (focus=="per" || focus=="Per" || focus=="PER"))
+        {
+            cout<<"Xiaomi POCO F7 is The best mid-range phone that focuses on Performance"<<endl;
+        }
+        else if (budget>200 && budget<=600 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
+        {
+            cout<<"Google Pixel 9a is the best mid-range phone that focuses on UI"<<endl;
+        }
+        else if (budget>200 && budget<=600 && (focus=="All" || focus=="all" || focus=="ALL"))
+        {
+            cout<<"Samsung Galaxy A56 is the best balanced mid-range phone"<<endl;
+        }
+        else if (budget>600 && budget<=950 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
+        {
+            cout<<"Xiaomi 15T Pro is the best Flagship-killer phone that focuses on Camera"<<endl;
+        }
+        else if (budget>600 && budget<=950 && (focus=="per" || focus=="Per" || focus=="PER"))
+        {
+            cout<<"Xiaomi POCO F8 Ultra is the best Flagship-killer phone that focuses on Performance"<<endl;
+        }
+        else if (budget>600 && budget<=950 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
+        {
+            cout<<"iPhone 17 is the best Flagship-killer phone that focuses on UI"<<endl;
+        }
+        else if (budget>600 && budget<=950 && (focus=="All" || focus=="all" || focus=="ALL"))
+        {
+            cout<<"Samsung Galaxy S26 is the best balanced Flagship-killer phone"<<endl;
+        }
+        else if (budget>950 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
+        {
+            cout<<"Xiaomi 17 Ultra is the best Flagship phone that focuses on Camera"<<endl;
+        }
+        else if (budget>950 && (focus=="per" || focus=="Per" || focus=="PER"))
+        {
+            cout<<"RedMagic 11 Pro is the best Flagship phone that focuses on Performance"<<endl;
+        }
+        else if (budget>950 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
+        {
+            cout<<"iPhone 17 Pro Max is the best Flagship phone that focuses on UI"<<endl;
+        }
+        else if (budget>950 && (focus=="All" || focus=="all" || focus=="ALL"))
+        {
+            cout<<"Samsung Galaxy S26 Ultra is the best balanced Flagship Phone"<<endl;
+        }
+        else if (budget<100)
+        {
+            cout<<"There is no excellent phone at this price"<<endl;
+        }
+        else if (focus!="cam" || focus!="Cam" || focus!="CAM" || focus!="per" || focus!="Per" || focus!="PER" || focus!="UI" || focus!="ui" || focus!="Ui" || focus!="uI" || focus!="All" || focus!="all" || focus!="ALL")
+        {
+            cout<<"Invalid Choice !"<<endl;
+        }
+        cout<<" "<<endl;
+        cout<<"============================================"<<endl;
+        cout<<" "<<endl;
+    }
+    case 7:
+    {
+        break;
+        break;
+    }
+    default:
     {
         cout<<"Invalid Choice !"<<endl;
     }
-    
     string ex;
     cout<<"Do You want To Exit ?: (y/n): ";
     cin>>ex;
@@ -254,8 +366,9 @@ while (true)
         break;
     }
 
-}
+    }
     cout<<"Developed on Arch Linux (Kernel 6.19)" << endl;
     cout<<"PC: HP 250 G1 | CPU: Core i3-2348M" << endl;
+}
     return 0;
 }
