@@ -1,6 +1,6 @@
 # 💻⚙️ Peax OS
 
-A very small operating system that functions as a terminal tool developed by **RacX Labs**.
+A very small terminal tool developed by **RacX Labs**.
 
 ## ✨ Main Features
 - **Age Calculator:** Detailed breakdown of your age.
