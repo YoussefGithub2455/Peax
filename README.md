@@ -1,6 +1,6 @@
 # 💻⚙️ Peax OS
 
-A very small terminal tool developed by **RacX Labs**.
+A very small terminal tool developed by **RacX**.
 
 ## ✨ Main Features
 - **Age Calculator:** Detailed breakdown of your age.
@@ -23,6 +23,7 @@ g++ Peax.cpp -o peax
 ---
 
 
+
 **RacX** aims to become a larger brand and develop its own distribution: **PeaX OS**. **RacX** currently consists of only one developer who is learning **kernel** and **operating system** development.
 
 # RacX Systems Project :
@@ -40,4 +41,24 @@ g++ Peax.cpp -o peax
 
 
 **by Mtitla**
+
+
+**RacX Systems** aims to become a larger brand and develop its own distribution: **PeaX OS**. **RacX** currently consists of only one developer who is learning **kernel** and **operating system** developme
+                            
+**RacX Systems Project**:
+- **PeaX INK** or **PINK**: The independent kernel
+- **PBL**: PeaX boot loader
+- **PXD**: The PeaX Desktop
+- **PPM**: The fastest package manager
+- **PeaX OS**: The System
+
+- Tech Stack:
+   - **PeaX INK**: C, Assembly
+   - **PBL**: C, Assembly
+   - **PXD**: C++
+   - **System tools**, **PPM**: C++, Rust, C
+
+
+- by Mtitla
+
 
