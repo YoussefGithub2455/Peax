@@ -1,4 +1,4 @@
-# <img src="RacX_Logo.png" width="35" valign="middle"> PeaX OS
+# <img src="RacX_Logo_png.png" width="35" valign="middle"> PeaX OS
 # 💻⚙️ Peax OS
 
 A very small terminal tool developed by **RacX**.
