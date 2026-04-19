@@ -23,10 +23,9 @@ g++ Peax.cpp -o peax
 ---
 *Developed by **Mtitla**.*
 
-**RacX Systems** aims to become a larger brand and develop its own distribution: **PeaX OS**. **RacX** currently consists of only one developer who is learning **kernel** and **operating system** development.
-
-
-                                             RacX Systems Project
+**RacX Systems** aims to become a larger brand and develop its own distribution: **PeaX OS**. **RacX** currently consists of only one developer who is learning **kernel** and **operating system** developme
+                            
+**RacX Systems Project**:
 PeaX INK or PINK: The independent kernel
 PBL: PeaX boot loader
 PXD: The PeaX Desktop
