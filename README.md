@@ -1,3 +1,4 @@
+# <img src="RacX_Logo.png" width="35" valign="middle"> PeaX OS
 # 💻⚙️ Peax OS
 
 A very small terminal tool developed by **RacX**.
@@ -52,11 +53,11 @@ g++ Peax.cpp -o peax
 - **PPM**: The fastest package manager
 - **PeaX OS**: The System
 
-- Tech Stack:
-   - **PeaX INK**: C, Assembly
-   - **PBL**: C, Assembly
-   - **PXD**: C++
-   - **System tools**, **PPM**: C++, Rust, C
+# Tech Stack:
+- **PeaX INK**: C, Assembly
+- **PBL**: C, Assembly
+- **PXD**: C++
+- **System tools**, **PPM**: C++, Rust, C
 
 
 - by Mtitla
