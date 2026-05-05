@@ -1,43 +1,46 @@
 #include <iostream>
 #include <cmath>
-using namespace std;
+#include <string>
+
 int main ()
 {
-while (true) 
-{
+    while (true) 
+    {
+        std::cout << " " << "\n";
+        std::cout << " " << "\n";
+        std::cout << " " << "\n";
+        std::cout << "====================================================================" << "\n";
+        int choice;
+        std::cout << " " << "\n";
+        std::cout << "1.Age Calculator" << "\n";
+        std::cout << "2.Number Calculator" << "\n";
+        std::cout << "3.ASCII Calculator" << "\n";
+        std::cout << "4.Charcter Encrypter" << "\n";
+        std::cout << "5.Odd/Even number Checker" << "\n";
+        std::cout << "6.Phone Suggester" << "\n";
+        std::cout << "7.Exit" << "\n";
+        std::cout << " " << "\n";
+        std::cout << "==============================================" << "\n";
+        std::cout << " " << "\n";
+        std::cout << "Choose a Program: ";
+        std::cin >> choice;
 
-    cout<<" "<<endl;
-    cout<<""<<endl;
-    cout<<" "<<endl;
-    cout<<"===================================================================="<<endl;
-    int choice;
-    cout<<" "<<endl;
-    cout<<"1.Age Calculator"<<endl;
-    cout<<"2.Number Calculator"<<endl;
-    cout<<"3.ASCII Calculator"<<endl;
-    cout<<"4.Charcter Encrypter"<<endl;
-    cout<<"5.Odd/Even number Checker"<<endl;
-    cout<<"6.Phone Suggester"<<endl;
-    cout<<"7.Exit"<<endl;
-    cout<<" "<<endl;
-    cout<<"=============================================="<<endl;
-    cout<<" "<<endl;
-    cout<<"Choose a Program: ";
-    cin>>choice;
-    if (cin.fail()) {
-    cin.clear();
-    cin.ignore(1000, '\n');
-    continue; 
-    }
-    cout<<" "<<endl;
-    cout<<"=============================================="<<endl;
-    cout<<" "<<endl;
-    switch (choice)
-    {
-    case 1:
-    {
-        cout<<" "<<endl;
-        cout<<R"(
+        if (std::cin.fail()) {
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+            continue; 
+        }
+
+        std::cout << " " << "\n";
+        std::cout << "==============================================" << "\n";
+        std::cout << " " << "\n";
+
+        switch (choice)
+        {
+        case 1:
+        {
+            std::cout << " " << "\n";
+            std::cout << R"(
             _                 ____      _            _       _             
    / \   __ _  ___   / ___|__ _| | ___ _   _| | __ _| |_ ___  _ __ 
   / _ \ / _` |/ _ \ | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__|
@@ -45,51 +48,51 @@ while (true)
 /_/   \_\__, |\___|  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   
         |___/                                                      
         
-        )"<<endl;
-        cout<<" "<<endl;
-        long age;
-        cout<<"Enter Your age in years: ";
-        cin>>age;
-        cout<<" "<<endl;
-        string choose;
-        cout<<"Choose: (Age in: months/days/hours/seconds): ";
-        cin>>choose;
-        cout<<" "<<endl;
-        if (choose=="Months" || choose=="MONTHS" || choose=="months" || choose=="Month" || choose=="MONTH" || choose=="month")
-        {
-            cout<<"Your age in months is: "<<age*12<<" months"<<endl;
+            )" << "\n";
+            std::cout << " " << "\n";
+            long age;
+            std::cout << "Enter Your age in years: ";
+            std::cin >> age;
+            std::cout << " " << "\n";
+            std::string choose;
+            std::cout << "Choose: (Age in: months/days/hours/seconds): ";
+            std::cin >> choose;
+            std::cout << " " << "\n";
+
+            if (choose == "Months" || choose == "MONTHS" || choose == "months" || choose == "Month" || choose == "MONTH" || choose == "month")
+            {
+                std::cout << "Your age in months is: " << age * 12 << " months" << "\n";
+            }
+            else if (choose=="Days" || choose=="DAYS" || choose=="days" || choose=="Day" || choose=="DAY" || choose=="day")
+            {
+                std::cout << "Your age in days is: " << age * 365 << " days" << "\n";
+            }  
+            else if (choose=="Hours" || choose=="HOURS" || choose=="hours" || choose=="Hour" || choose=="HOUR" || choose=="hour")
+            {
+                std::cout << "Your age in hours is: " << age * 365 * 24 << " hours" << "\n";
+            }
+            else if (choose=="Minutes" || choose=="MINUTES" || choose=="minutes" || choose=="Minute" || choose=="MINUTE" || choose=="minute")
+            {
+                std::cout << "Your age in minutes is: " << age * 365 * 24 * 60 << " minutes" << "\n";
+            }  
+            else if (choose=="Seconds" || choose=="SECONDS" || choose=="seconds" || choose=="Second" || choose=="SECOND" || choose=="second")
+            {
+                std::cout << "Your age in seconds is: " << age * 365 * 24 * 60 * 60 << " seconds" << "\n";
+            }
+            else 
+            {
+                std::cout << "Invalid Choice !" << "\n";
+            }
+            std::cout << " " << "\n";
+            std::cout << "===================================== " << "\n";
+            std::cout << " " << "\n";
+            break;
         }
-        else if (choose=="Days" || choose=="DAYS" || choose=="days" || choose=="Day" || choose=="DAY" || choose=="day")
+        
+        case 2:
         {
-            cout<<"Your age in days is: "<<age*365<<" days"<<endl;
-        }   
-        else if (choose=="Hours" || choose=="HOURS" || choose=="hours" || choose=="Hour" || choose=="HOUR" || choose=="hour")
-        {
-            cout<<"Your age in hours is: "<<age*365*24<<" hours"<<endl;
-        }
-        else if (choose=="Minutes" || choose=="MINUTES" || choose=="minutes" || choose=="Minute" || choose=="MINUTE" || choose=="minute")
-        {
-            cout<<"Your age in minutes is: "<<age*365*24*60<<" minutes"<<endl;
-        }  
-        else if (choose=="Seconds" || choose=="SECONDS" || choose=="seconds" || choose=="Second" || choose=="SECOND" || choose=="second")
-        {
-            cout<<"Your age in seconds is: "<<age*365*24*60*60<<" seconds"<<endl;
-        }
-        else 
-        {
-            cout<<"Invalid Choice !"<<endl;
-        }
-        cout<<" "<<endl;
-        cout<<"===================================== "<<endl;
-        cout<<" "<<endl;
-        break;
-    }
-    
-    case 2:
-    {
-        cout<<" "<<endl;
-       
-        cout<<R"(
+            std::cout << " " << "\n";
+            std::cout << R"(
          _   _                 _                       
 | \ | |_   _ _ __ ___ | |__   ___ _ __         
 |  \| | | | | '_ ` _ \| '_ \ / _ \ '__|        
@@ -99,104 +102,103 @@ while (true)
 | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__|
 | |__| (_| | | (__| |_| | | (_| | || (_) | |   
  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   
-        )"<<endl;
-        cout<<" "<<endl;
-        long n1;
-        cout<<"Enter First number: ";
-        cin>>n1;
-        string oper;
-        cout<<"Choose: (+,-,x,/,%,^): ";
-        cin>>oper;
-        long n2;
-        cout<<"Enter Second number: ";
-        cin>>n2;
-        cout<<" "<<endl;
+            )" << "\n";
+            std::cout << " " << "\n";
+            long n1;
+            std::cout << "Enter First number: ";
+            std::cin >> n1;
+            std::string oper;
+            std::cout << "Choose: (+,-,x,/,%,^): ";
+            std::cin >> oper;
+            long n2;
+            std::cout << "Enter Second number: ";
+            std::cin >> n2;
+            std::cout << " " << "\n";
 
-        if (oper=="+")
-        {
-            cout<<n1<<" + "<<n2<<" = "<<n1+n2<<endl;
-        }
-        else if (oper=="-")
-        {
-            cout<<n1<<" - "<<n2<<" = "<<n1-n2<<endl;
-        }
-        else if (oper=="x")
-        {
-            cout<<n1<<" x "<<n2<<" = "<<n1*n2<<endl;
-        }
-        else if (oper=="/")
-        {
-    
-            if (n2==0)
+            if (oper == "+")
             {
-                cout<<"Can't divide by zero !"<<endl;
+                std::cout << n1 << " + " << n2 << " = " << n1 + n2 << "\n";
             }
-            else 
+            else if (oper == "-")
             {
-                cout<<n1<<" ÷ "<<n2<<" = "<<float(n1)/float(n2)<<endl;
+                std::cout << n1 << " - " << n2 << " = " << n1 - n2 << "\n";
             }
+            else if (oper == "x")
+            {
+                std::cout << n1 << " x " << n2 << " = " << n1 * n2 << "\n";
+            }
+            else if (oper == "/")
+            {
+                if (n2 == 0)
+                {
+                    std::cout << "Can't divide by zero !" << "\n";
+                }
+                else 
+                {
+                    std::cout << n1 << " ÷ " << n2 << " = " << (float)n1 / (float)n2 << "\n";
+                }
+            }
+            else if (oper == "%")
+            {
+                std::cout << n1 << " % " << n2 << " = " << n1 % n2 << "\n";
+            }
+            else if (oper == "^")
+            {
+                std::cout << n1 << " ^ " << n2 << " = " << std::pow(n1, n2) << "\n";
+            }
+            else
+            {
+                std::cout << "Invalid Choice !" << "\n";
+            }
+            std::cout << " " << "\n";
+            std::cout << "==============================" << "\n";
+            std::cout << " " << "\n";
+            break;
         }
-        else if (oper=="%")
-        {
-            cout<<n1<<" % "<<n2<<" = "<<n1%n2<<endl;
-        }
-        else if (oper=="^")
-        {
-            cout<<n1<<" ^ "<<n2<<" = "<<pow(n1,n2)<<endl;
-        }
-        else
-        {
-            cout<<"Invalid Choice !"<<endl;
-        }
-        cout<<" "<<endl;
-        cout<<"=============================="<<endl;
-        cout<<" "<<endl;
-        break;
-    }
 
-    case 3:
-    {
-        cout<<" "<<endl;
-        cout<<R"(
+        case 3:
+        {
+            std::cout << " " << "\n";
+            std::cout << R"(
     _    ____        ___ ___     ___             
    / \  / ___| / ___|_ _|_ _|  / ___|__ _| | ___ _   _| | __ _| |_ ___  _ __ 
   / _ \ \___ \| |    | | | |  | |   / _` | |/ __| | | | |/ _` | __/ _ \| '__|
  / ___ \ ___) | |___ | | | |  | |__| (_| | | (__| |_| | | (_| | || (_) | |   
 /_/   \_\____/ \____|___|___|  \____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   
-        )"  <<endl;  
-        cout<<" "<<endl;
-        string ch;
-        cout<<" Do you want to Calculate Character or ASCII: (char/ASCII): ";
-        cin>>ch;
-        if (ch=="char" || ch=="Char" ||  ch==" CHAR")
-        {
-            int chr;
-            cout<<"Enter ASCII: ";
-            cin>>chr;
-            cout<<" "<<endl;
-            cout<<"Your Character is: "<<char(chr)<<endl;
-            cout<<" "<<endl;
-            cout<<"========================="<<endl;
-            cout<<" "<<endl;
+            )" << "\n";  
+            std::cout << " " << "\n";
+            std::string ch;
+            std::cout << " Do you want to Calculate Character or ASCII: (char/ASCII): ";
+            std::cin >> ch;
+            if (ch == "char" || ch == "Char" || ch == " CHAR")
+            {
+                int chr;
+                std::cout << "Enter ASCII: ";
+                std::cin >> chr;
+                std::cout << " " << "\n";
+                std::cout << "Your Character is: " << (char)chr << "\n";
+                std::cout << " " << "\n";
+                std::cout << "=========================" << "\n";
+                std::cout << " " << "\n";
+            }
+            else if (ch == "ASCII" || ch == "ascii")
+            {
+                char asc;
+                std::cout << "Enter Character: ";
+                std::cin >> asc;
+                std::cout << " " << "\n";
+                std::cout << "Your ASCII is: " << (int)asc << "\n";
+                std::cout << " " << "\n";
+                std::cout << "===========================" << "\n";
+                std::cout << " " << "\n";
+            }       
+            break; 
         }
-        else if (ch=="ASCII" || ch=="ascii")
-        {
-            char asc;
-            cout<<"Enter Character: ";
-            cin>>asc;
-            cout<<" "<<endl;
-            cout<<"Your ASCII is: "<<int(asc)<<endl;
-            cout<<" "<<endl;
-            cout<<"==========================="<<endl;
-            cout<<" "<<endl;
-        }       
-        break; 
-    }
 
-    case 4:
-    {
-        cout<<" "<<endl;
-        cout<<R"(  ____ _                          _             
+        case 4:
+        {
+            std::cout << " " << "\n";
+            std::cout << R"(  ____ _                          _             
  / ___| |__   __ _ _ __ __ _  ___| |_ ___ _ __  
 | |   | '_ \ / _` | '__/ _` |/ __| __/ _ \ '__| 
 | |___| | | | (_| | | | (_| | (__| ||  __/ |    
@@ -205,46 +207,46 @@ while (true)
 |  _| | '_ \ / __| '__| | | | '_ \| __/ _ \ '__|
 | |___| | | | (__| |  | |_| | |_) | ||  __/ |   
 |_____|_| |_|\___|_|   \__, | .__/ \__\___|_|   
-                       |___/|_|                 )"<<endl;
-        char ch;
-        cout<<" "<<endl;
-        cout<<"Enter Character: ";
-        cin>>ch;
-        int nch=ch+=1;
-        cout<<" "<<endl;
-        cout<<"Your Encrypted ASCII is: "<<nch<<endl;
-        cout<<" "<<endl;
-        cout<<"==============================="<<endl;
-        cout<<" "<<endl;
-        break;
-    }
+                       |___/|_|                 )" << "\n";
+            char ch;
+            std::cout << " " << "\n";
+            std::cout << "Enter Character: ";
+            std::cin >> ch;
+            int nch = ch + 1;
+            std::cout << " " << "\n";
+            std::cout << "Your Encrypted ASCII is: " << nch << "\n";
+            std::cout << " " << "\n";
+            std::cout << "===============================" << "\n";
+            std::cout << " " << "\n";
+            break;
+        }
 
-    case 5:
-    {
-        cout<<"Odd/Even number Checker"<<endl;
-        cout<<" "<<endl;
-        int numb;
-        cout<<"Enter Your number: ";
-        cin>>numb;
-        cout<<" "<<endl;
-        cout<<"==============================="<<endl;
-        cout<<" "<<endl;
-        if (numb%2==0)
+        case 5:
         {
-            cout<<numb<<" is an even number"<<endl;
+            std::cout << "Odd/Even number Checker" << "\n";
+            std::cout << " " << "\n";
+            int numb;
+            std::cout << "Enter Your number: ";
+            std::cin >> numb;
+            std::cout << " " << "\n";
+            std::cout << "===============================" << "\n";
+            std::cout << " " << "\n";
+            if (numb % 2 == 0)
+            {
+                std::cout << numb << " is an even number" << "\n";
+            }
+            else
+            {
+                std::cout << numb << " is an odd number" << "\n";
+            }
+            std::cout << " " << "\n";
+            std::cout << "===============================" << "\n";
+            std::cout << " " << "\n";
+            break;
         }
-        else
+        case 6:
         {
-            cout<<numb<<" is an odd number"<<endl;
-        }
-        cout<<" "<<endl;
-        cout<<"==============================="<<endl;
-        cout<<" "<<endl;
-        break;
-    }
-    case 6:
-    {
-        cout<<R"( ____  _                                        
+            std::cout << R"( ____  _                                        
 |  _ \| |__   ___  _ __   ___                   
 | |_) | '_ \ / _ \| '_ \ / _ \                  
 |  __/| | | | (_) | | | |  __/                  
@@ -253,123 +255,123 @@ while (true)
 \___ \| | | |/ _` |/ _` |/ _ \/ __| __/ _ \ '__|
  ___) | |_| | (_| | (_| |  __/\__ \ ||  __/ |   
 |____/ \__,_|\__, |\__, |\___||___/\__\___|_|   
-             |___/ |___/                        )"<<endl;
-        cout<<" "<<endl;
-        cout<<"==================================="<<endl;
-        cout<<" "<<endl;
-        int budget;
-        cout<<"Enter Your Budget in $: ";
-        cin>>budget;
-        string focus;
-        cout<<"Are you focusing on the camera, performance, UI, or All ?: (cam/per/UI/All): ";
-        cin>>focus;
-        cout<<" "<<endl;
-        cout<<"============================================"<<endl;
-        cout<<" "<<endl;
+             |___/ |___/                        )" << "\n";
+            std::cout << " " << "\n";
+            std::cout << "===================================" << "\n";
+            std::cout << " " << "\n";
+            int budget;
+            std::cout << "Enter Your Budget in $: ";
+            std::cin >> budget;
+            std::string focus;
+            std::cout << "Are you focusing on the camera, performance, UI, or All ?: (cam/per/UI/All): ";
+            std::cin >> focus;
+            std::cout << " " << "\n";
+            std::cout << "============================================" << "\n";
+            std::cout << " " << "\n";
 
-        if (budget>100 && budget<=200 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
-        {
-            cout<<"Xiaomi Redmi Note 14 is the best cheap phone that focuses on the camera."<<endl;
+            if (budget > 100 && budget <= 200 && (focus == "cam" || focus == "Cam" || focus == "CAM"))
+            {
+                std::cout << "Xiaomi Redmi Note 14 is the best cheap phone that focuses on the camera." << "\n";
+            }
+            else if (budget > 100 && budget <= 200 && (focus == "per" || focus == "Per" || focus == "PER"))
+            {
+                std::cout << "Realme 14X is the best cheap phone that focuses on Performance" << "\n";
+            }
+            else if (budget > 100 && budget <= 200 && (focus == "UI" || focus == "ui" || focus == "Ui" || focus == "uI"))
+            {
+                std::cout << "Samsung Galaxy A17 is the best cheap phone that focuses on UI" << "\n";
+            }
+            else if (budget > 100 && budget <= 200 && (focus == "All" || focus == "all" || focus == "ALL"))
+            {
+                std::cout << "Samsung Galaxy A17 is the best balanced cheap phone" << "\n";
+            }
+            else if (budget > 200 && budget <= 600 && (focus == "cam" || focus == "Cam" || focus == "CAM"))
+            {
+                std::cout << "Google Pixel 9a is the best mid-range phone that focuses on Camera" << "\n";
+            }
+            else if (budget > 200 && budget <= 600 && (focus == "per" || focus == "Per" || focus == "PER"))
+            {
+                std::cout << "Xiaomi POCO F7 is The best mid-range phone that focuses on Performance" << "\n";
+            }
+            else if (budget > 200 && budget <= 600 && (focus == "UI" || focus == "ui" || focus == "Ui" || focus == "uI"))
+            {
+                std::cout << "Google Pixel 9a is the best mid-range phone that focuses on UI" << "\n";
+            }
+            else if (budget > 200 && budget <= 600 && (focus == "All" || focus == "all" || focus == "ALL"))
+            {
+                std::cout << "Samsung Galaxy A56 is the best balanced mid-range phone" << "\n";
+            }
+            else if (budget > 600 && budget <= 950 && (focus == "cam" || focus == "Cam" || focus == "CAM"))
+            {
+                std::cout << "Xiaomi 15T Pro is the best Flagship-killer phone that focuses on Camera" << "\n";
+            }
+            else if (budget > 600 && budget <= 950 && (focus == "per" || focus == "Per" || focus == "PER"))
+            {
+                std::cout << "Xiaomi POCO F8 Ultra is the best Flagship-killer phone that focuses on Performance" << "\n";
+            }
+            else if (budget > 600 && budget <= 950 && (focus == "UI" || focus == "ui" || focus == "Ui" || focus == "uI"))
+            {
+                std::cout << "iPhone 17 is the best Flagship-killer phone that focuses on UI" << "\n";
+            }
+            else if (budget > 600 && budget <= 950 && (focus == "All" || focus == "all" || focus == "ALL"))
+            {
+                std::cout << "Samsung Galaxy S26 is the best balanced Flagship-killer phone" << "\n";
+            }
+            else if (budget > 950 && (focus == "cam" || focus == "Cam" || focus == "CAM"))
+            {
+                std::cout << "Xiaomi 17 Ultra is the best Flagship phone that focuses on Camera" << "\n";
+            }
+            else if (budget > 950 && (focus == "per" || focus == "Per" || focus == "PER"))
+            {
+                std::cout << "RedMagic 11 Pro is the best Flagship phone that focuses on Performance" << "\n";
+            }
+            else if (budget > 950 && (focus == "UI" || focus == "ui" || focus == "Ui" || focus == "uI"))
+            {
+                std::cout << "iPhone 17 Pro Max is the best Flagship phone that focuses on UI" << "\n";
+            }
+            else if (budget > 950 && (focus == "All" || focus == "all" || focus == "ALL"))
+            {
+                std::cout << "Samsung Galaxy S26 Ultra is the best balanced Flagship Phone" << "\n";
+            }
+            else if (budget < 100)
+            {
+                std::cout << "There is no excellent phone at this price" << "\n";
+            }
+            else if (focus != "cam" && focus != "Cam" && focus != "CAM" && focus != "per" && focus != "Per" && focus != "PER" && focus != "UI" && focus != "ui" && focus != "Ui" && focus != "uI" && focus != "All" && focus != "all" && focus != "ALL")
+            {
+                std::cout << "Invalid Choice !" << "\n";
+            }
+            std::cout << " " << "\n";
+            std::cout << "============================================" << "\n";
+            std::cout << " " << "\n";
+            break;
         }
-        else if (budget>100 && budget<=200 && (focus=="per" || focus=="Per" || focus=="PER"))
+        case 7:
         {
-            cout<<"Realme 14X is the best cheap phone that focuses on Performance"<<endl;
+            std::cout << "Exiting PeaX OS... Goodbye!" << "\n";
+            return 0; 
         }
-        else if (budget>100 && budget<=200 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
+        
+        default:
         {
-            cout<<"Samsung Galaxy A17 is the best cheap phone that focuses on UI"<<endl;
+            std::cout << "Invalid Choice!" << "\n";
+            break;
         }
-        else if (budget>100 && budget<=200 && (focus=="All" || focus=="all" || focus=="ALL"))
-        {
-            cout<<"Samsung Galaxy A17 is the best balanced cheap phone"<<endl;
         }
-        else if (budget>200 && budget<=600 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
-        {
-            cout<<"Google Pixel 9a is the best mid-range phone that focuses on Camera"<<endl;
-        }
-        else if (budget>200 && budget<=600 && (focus=="per" || focus=="Per" || focus=="PER"))
-        {
-            cout<<"Xiaomi POCO F7 is The best mid-range phone that focuses on Performance"<<endl;
-        }
-        else if (budget>200 && budget<=600 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
-        {
-            cout<<"Google Pixel 9a is the best mid-range phone that focuses on UI"<<endl;
-        }
-        else if (budget>200 && budget<=600 && (focus=="All" || focus=="all" || focus=="ALL"))
-        {
-            cout<<"Samsung Galaxy A56 is the best balanced mid-range phone"<<endl;
-        }
-        else if (budget>600 && budget<=950 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
-        {
-            cout<<"Xiaomi 15T Pro is the best Flagship-killer phone that focuses on Camera"<<endl;
-        }
-        else if (budget>600 && budget<=950 && (focus=="per" || focus=="Per" || focus=="PER"))
-        {
-            cout<<"Xiaomi POCO F8 Ultra is the best Flagship-killer phone that focuses on Performance"<<endl;
-        }
-        else if (budget>600 && budget<=950 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
-        {
-            cout<<"iPhone 17 is the best Flagship-killer phone that focuses on UI"<<endl;
-        }
-        else if (budget>600 && budget<=950 && (focus=="All" || focus=="all" || focus=="ALL"))
-        {
-            cout<<"Samsung Galaxy S26 is the best balanced Flagship-killer phone"<<endl;
-        }
-        else if (budget>950 && (focus=="cam" || focus=="Cam" || focus=="CAM"))
-        {
-            cout<<"Xiaomi 17 Ultra is the best Flagship phone that focuses on Camera"<<endl;
-        }
-        else if (budget>950 && (focus=="per" || focus=="Per" || focus=="PER"))
-        {
-            cout<<"RedMagic 11 Pro is the best Flagship phone that focuses on Performance"<<endl;
-        }
-        else if (budget>950 && (focus=="UI" || focus=="ui" || focus=="Ui" || focus=="uI"))
-        {
-            cout<<"iPhone 17 Pro Max is the best Flagship phone that focuses on UI"<<endl;
-        }
-        else if (budget>950 && (focus=="All" || focus=="all" || focus=="ALL"))
-        {
-            cout<<"Samsung Galaxy S26 Ultra is the best balanced Flagship Phone"<<endl;
-        }
-        else if (budget<100)
-        {
-            cout<<"There is no excellent phone at this price"<<endl;
-        }
-        else if (focus!="cam" && focus!="Cam" && focus!="CAM" && focus!="per" && focus!="Per" && focus!="PER" && focus!="UI" && focus!="ui" && focus!="Ui" && focus!="uI" && focus!="All" && focus!="all" && focus!="ALL")
-        {
-            cout<<"Invalid Choice !"<<endl;
-        }
-        cout<<" "<<endl;
-        cout<<"============================================"<<endl;
-        cout<<" "<<endl;
-        break;
-    }
-   case 7:
-    {
-        cout << "Exiting PeaX OS... Goodbye!" << endl;
-        return 0; 
-    }
-    
-    default:
-    {
-        cout << "Invalid Choice!" << endl;
-        break;
-    }
-    }
 
-    string ex;
-    cout << "Do You want To Exit? (y/n): ";
-    cin >> ex;
-    
-    if (ex == "y" || ex == "Y") 
-    {
-        break; 
-    }
+        std::string ex;
+        std::cout << "Do You want To Exit? (y/n): ";
+        std::cin >> ex;
+        
+        if (ex == "y" || ex == "Y") 
+        {
+            break; 
+        }
 
-    cout << "\nDeveloped on Arch Linux (Kernel 6.19)" << endl;
-    cout << "PC: HP 250 G1 | CPU: Core i3-2348M" << endl;
-    cout << "==============================================\n" << endl;
+        std::cout << "\nDeveloped on Arch Linux (Kernel 6.19)" << "\n";
+        std::cout << "PC: HP 250 G1 | CPU: Core i3-2348M" << "\n";
+        std::cout << "==============================================\n" << "\n";
 
-} 
+    } 
     return 0;
 }
